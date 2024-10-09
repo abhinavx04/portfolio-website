@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from "./components/Header";
-import Home from "./components/Home";
-import About from "./components/About";
-import TechStack from "./components/TechStack";
-import Projects from "./components/Projects";
-import ContactMe from "./components/ContactMe";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import TechStack from "./Components/TechStack";
+import Projects from "./Components/Projects";
+import ContactMe from "./Components/ContactMe";
 
 function App() {
   return (
