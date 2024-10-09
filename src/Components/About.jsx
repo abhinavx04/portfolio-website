@@ -33,7 +33,7 @@ function About() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <h2 className="text-4xl font-bold text-cyan-400 mb-4">ABOUT ME</h2>
-              <h3 className="text-2xl font-semibold text-white mb-4">ABHINAV PILLAI, DESIGNER</h3>
+              <h3 className="text-2xl font-semibold text-white mb-4">ABHINAV PILLAI</h3>
               <p className="text-gray-300 mb-6">
                 Result-oriented Web Application Developer with one year of impactful front-end development experience. Expert in ReactJS, Tailwind, and responsive web design, delivering accessible, cross-browser-compatible applications. Proficient in Git, GitHub, and integrating APIs to create engaging user experiences. Developed clones of Spotify, MakeMyTrip, and Amazon. Pursuing a B.Tech in Computer Science and Engineering, with solid knowledge of HTML, CSS, and JavaScript. Ready to leverage my skills and passion in a dynamic Web Developer role to drive innovation and deliver seamless solutions.
               </p>
