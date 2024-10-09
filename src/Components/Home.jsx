@@ -87,7 +87,7 @@ function Home() {
   return (
     <section 
       id="home" 
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-gradient-to-br from-black to-gray-900"
+      className="section relative flex items-center justify-center overflow-hidden"
     >
       <div ref={backgroundRef} className="absolute inset-0 overflow-hidden">
         {icons.map((icon, index) => (
@@ -146,7 +146,7 @@ function Home() {
             }}
           >
             <img 
-              src="/path/to/your/image.jpg" 
+              src="./src/assets/bck_img.jpeg" 
               alt="Abhinav Pillai" 
               className="w-full h-full object-cover"
             />

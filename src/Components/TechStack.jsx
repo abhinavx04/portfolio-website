@@ -19,7 +19,7 @@ const technologies = [
 
 function TechStack() {
   return (
-    <section id="tech-stack" className="min-h-screen py-20 px-4 bg-gradient-to-br from-black to-gray-900">
+    <section id="tech-stack" className="section px-4">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           className="relative mb-12"

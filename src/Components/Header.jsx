@@ -58,9 +58,9 @@ function Header() {
         </nav>
         <div className="flex space-x-4">
           {[
-            { icon: FaInstagram, link: "https://instagram.com/yourusername" },
-            { icon: FaLinkedin, link: "https://linkedin.com/in/yourusername" },
-            { icon: FaGithub, link: "https://github.com/yourusername" }
+            { icon: FaInstagram, link: "https://www.instagram.com/_abhinavx.__/?next=%2Fyourusername%2F" },
+            { icon: FaLinkedin, link: "https://www.linkedin.com/in/abhinav-pillai-b5533526a/" },
+            { icon: FaGithub, link: "https://github.com/abhinavx04" }
           ].map((item, index) => (
             <motion.a
               key={index}

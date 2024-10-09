@@ -47,9 +47,9 @@ const ContactMe = () => {
             {/* Contact Info Section */}
             <div className="space-y-4">
               {[
-                { icon: FaPhone, text: "+1234567890" },
-                { icon: FaEnvelope, text: "your@email.com" },
-                { icon: FaMapMarkerAlt, text: "Your Location" }
+                { icon: FaPhone, text: "91+ 8600101572" },
+                { icon: FaEnvelope, text: "abhinavpillai92@gmail.com" },
+                { icon: FaMapMarkerAlt, text: "Chennai" }
               ].map((item, index) => (
                 <motion.div 
                   key={index}

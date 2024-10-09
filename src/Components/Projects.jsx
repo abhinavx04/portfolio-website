@@ -6,31 +6,39 @@ const projects = [
   {
     title: "Spotify Clone",
     description: "A clone of the popular music streaming platform Spotify.",
-    image: "/path/to/spotify-clone-image.jpg",
+    image: "./src/assets/spotify.png",
     technologies: "React.js, Tailwind CSS",
-    github: "https://github.com/yourusername/spotify-clone",
-    live: "https://your-spotify-clone-url.com"
+    github: "https://github.com/abhinavx04/spotify-clone",
+    live: "https://spotify-clone-pearl-one.vercel.app/"
   },
   {
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my projects and skills.",
-    image: "/path/to/portfolio-image.jpg",
+    image: "./src/assets/portfolio.png",
     technologies: "React.js, Tailwind CSS",
-    github: "https://github.com/yourusername/portfolio",
+    github: "https://github.com/abhinavx04/portfolio-website",
     live: "https://your-portfolio-url.com"
+  },
+  {
+    title: "Amazon Clone",
+    description: "A clone of the popular shopping platform Amazon.",
+    image: "./src/assets/amazon.png",
+    technologies: "React.js, Tailwind CSS",
+    github: "https://github.com/abhinavx04/amazonclone",
+    live: "https://your-spotify-clone-url.com"
   },
   {
     title: "MakeMyTrip Clone",
     description: "A clone of the popular travel booking website MakeMyTrip.",
-    image: "/path/to/makemytrip-clone-image.jpg",
+    image: "./src/assets/mmt.png",
     technologies: "HTML, CSS",
-    github: "https://github.com/yourusername/makemytrip-clone",
+    github: "https://github.com/abhinavx04/makemytripclone",
     live: "https://your-makemytrip-clone-url.com"
   },
   {
     title: "Cuvette Tech Clone",
     description: "A clone of the Cuvette Tech website.",
-    image: "/path/to/cuvette-tech-clone-image.jpg",
+    image: "./src/assets/cuvette.png",
     technologies: "HTML, CSS, MongoDB",
     github: "https://github.com/yourusername/cuvette-tech-clone",
     live: "https://your-cuvette-tech-clone-url.com"
@@ -38,10 +46,10 @@ const projects = [
   {
     title: "RemoveBg Web App",
     description: "A web application to remove backgrounds from images.",
-    image: "/path/to/removebg-webapp-image.jpg",
+    image: "./src/assets/removebg.png",
     technologies: "HTML, CSS, JavaScript, API Integration",
-    github: "https://github.com/yourusername/removebg-webapp",
-    live: "https://your-removebg-webapp-url.com"
+    github: "https://github.com/abhinavx04/removebg",
+    live: "https://removebg-inky.vercel.app/"
   }
 ];
 
@@ -94,7 +102,7 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen bg-gradient-to-br from-black to-gray-900 py-20 px-4">
+    <section id="projects" className="section px-4">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           className="relative mb-12"

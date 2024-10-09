@@ -4,10 +4,10 @@ import { FaBehance, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function About() {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center py-20 px-4 bg-gradient-to-br from-black to-gray-900">
-      <div className="container mx-auto">
+    <section id="about" className="section px-4">
+      <div className="container mx-auto max-w-4xl">
         <motion.div 
-          className="bg-gray-900 rounded-lg shadow-2xl overflow-hidden"
+          className="bg-gray-800 bg-opacity-50 rounded-lg shadow-2xl overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -20,7 +20,7 @@ function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <img 
-                src="/path/to/your/image.jpg" 
+                src="./src/assets/aboutme.jpeg" 
                 alt="Abhinav Pillai" 
                 className="w-full h-full object-cover"
               />

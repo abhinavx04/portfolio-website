@@ -9,21 +9,20 @@ import ContactMe from "./Components/ContactMe";
 
 function App() {
   return (
-    <motion.div 
-      className="App bg-gradient-to-br from-black via-gray-900 to-black min-h-screen text-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="min-h-screen text-white">
       <Header />
-      <main>
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <Home />
         <About />
         <TechStack />
         <Projects />
         <ContactMe />
-      </main>
-    </motion.div>
+      </motion.main>
+    </div>
   );
 }
 
