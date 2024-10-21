@@ -102,7 +102,7 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="section px-4">
+    <section id="projects" className="section px-4 py-16 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           className="relative mb-12"
@@ -113,8 +113,8 @@ function Projects() {
           <div className="absolute top-0 left-0 bg-cyan-500 rounded-md p-2">
             <span className="text-black font-bold text-lg">05</span>
           </div>
-          <h2 className="text-xl text-gray-400 mb-2 pl-12">some of my recent works</h2>
-          <h3 className="text-4xl font-bold text-white pl-12">PROJECTS</h3>
+          <h2 className="text-lg sm:text-xl text-gray-400 mb-2 pl-12">some of my recent works</h2>
+          <h3 className="text-3xl sm:text-4xl font-bold text-white pl-12">PROJECTS</h3>
         </motion.div>
         
         <div className="relative">
@@ -125,7 +125,7 @@ function Projects() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {[0, 1, 2].map((offset) => {
                 const project = projects[(currentIndex + offset) % projects.length];
@@ -134,10 +134,9 @@ function Projects() {
             </motion.div>
           </AnimatePresence>
           
-          <div className="absolute top-1/2 left-0 w-full transform -translate-y-1/2 flex items-center justify-between pointer-events-none" style={{ width: 'calc(100% + 100px)' }}>
+          <div className="flex justify-center mt-8 space-x-4">
             <motion.button 
-              className="pointer-events-auto bg-cyan-500 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
-              style={{ marginLeft: '-100px' }}
+              className="bg-cyan-500 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={prevProjects}
@@ -146,8 +145,7 @@ function Projects() {
             </motion.button>
             
             <motion.button 
-              className="pointer-events-auto bg-cyan-500 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
-              style={{ marginRight: '-50px' }}
+              className="bg-cyan-500 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={nextProjects}

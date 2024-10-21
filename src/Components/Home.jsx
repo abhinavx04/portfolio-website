@@ -32,30 +32,35 @@ function Home() {
       );
     };
 
-    gsap.utils.toArray(iconElements).forEach((icon, index) => {
-      let x, y;
-      do {
-        x = gsap.utils.random(0, window.innerWidth);
-        y = gsap.utils.random(0, window.innerHeight);
-      } while (isTooClose(x, y));
+    const updateIconPositions = () => {
+      gsap.utils.toArray(iconElements).forEach((icon, index) => {
+        let x, y;
+        do {
+          x = gsap.utils.random(0, window.innerWidth);
+          y = gsap.utils.random(0, window.innerHeight);
+        } while (isTooClose(x, y));
 
-      iconPositions.push({ x, y });
+        iconPositions[index] = { x, y };
 
-      gsap.set(icon, {
-        x,
-        y,
-        scale: 0,
-        opacity: 0,
+        gsap.set(icon, {
+          x,
+          y,
+          scale: 0,
+          opacity: 0,
+        });
       });
-    });
 
-    gsap.to(iconElements, {
-      scale: 1,
-      opacity: 0.6,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out",
-    });
+      gsap.to(iconElements, {
+        scale: 1,
+        opacity: 0.6,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
+    };
+
+    updateIconPositions();
+    window.addEventListener('resize', updateIconPositions);
 
     const tl = gsap.timeline({ repeat: -1 });
 
@@ -81,13 +86,14 @@ function Home() {
 
     return () => {
       tl.kill();
+      window.removeEventListener('resize', updateIconPositions);
     };
   }, []);
 
   return (
     <section 
       id="home" 
-      className="section relative flex items-center justify-center overflow-hidden"
+      className="section relative flex items-center justify-center overflow-hidden min-h-screen px-4 py-16"
     >
       <div ref={backgroundRef} className="absolute inset-0 overflow-hidden">
         {icons.map((icon, index) => (
@@ -100,29 +106,29 @@ function Home() {
         ))}
       </div>
       
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-6 max-w-6xl mx-auto w-full">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto w-full">
         <motion.div 
-          className="text-left md:w-1/2 mb-8 md:mb-0"
+          className="text-center md:text-left md:w-1/2 mb-8 md:mb-0"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-cyan-400">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-cyan-400">
             Hey, I'm <span className="text-white">Abhinav</span>
           </h1>
-          <p className="text-xl mb-8 text-cyan-100">
+          <p className="text-lg sm:text-xl mb-8 text-cyan-100">
             Web developer passionate about creating amazing digital experiences.
           </p>
-          <div className="space-x-4">
+          <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center md:justify-start">
             <motion.button 
-              className="bg-cyan-500 text-black px-6 py-2 rounded-full hover:bg-cyan-400 transition duration-300"
+              className="bg-cyan-500 text-black px-6 py-2 rounded-full hover:bg-cyan-400 transition duration-300 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               About Me
             </motion.button>
             <motion.button 
-              className="bg-transparent border-2 border-cyan-500 text-cyan-400 px-6 py-2 rounded-full hover:bg-cyan-500 hover:text-black transition duration-300"
+              className="bg-transparent border-2 border-cyan-500 text-cyan-400 px-6 py-2 rounded-full hover:bg-cyan-500 hover:text-black transition duration-300 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -132,14 +138,14 @@ function Home() {
         </motion.div>
 
         <motion.div 
-          className="md:w-1/2 flex justify-center"
+          className="md:w-1/2 flex justify-center mt-8 md:mt-0"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div 
             ref={photoRef}
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-lg"
+            className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-cyan-400 shadow-lg"
             style={{
               boxShadow: '0 0 20px 10px rgba(6, 182, 212, 0.6), 0 0 40px 20px rgba(6, 182, 212, 0.4)',
               transition: 'box-shadow 0.3s ease-in-out'

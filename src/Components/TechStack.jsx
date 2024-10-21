@@ -19,7 +19,7 @@ const technologies = [
 
 function TechStack() {
   return (
-    <section id="tech-stack" className="section px-4">
+    <section id="tech-stack" className="section px-4 py-16 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           className="relative mb-12"
@@ -30,12 +30,12 @@ function TechStack() {
           <div className="absolute top-0 left-0 bg-cyan-500 rounded-md p-2">
             <span className="text-black font-bold text-lg">04</span>
           </div>
-          <h2 className="text-4xl font-bold text-white pl-12 mb-4">Tech Stack</h2>
-          <p className="text-gray-400 pl-12">Technologies I've been working with recently</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white pl-12 mb-2 sm:mb-4">Tech Stack</h2>
+          <p className="text-sm sm:text-base text-gray-400 pl-12">Technologies I've been working with recently</p>
         </motion.div>
         
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -43,15 +43,15 @@ function TechStack() {
           {technologies.map((tech, index) => (
             <motion.div
               key={tech.name}
-              className="bg-gray-800 rounded-lg p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50"
+              className="bg-gray-800 rounded-lg p-4 sm:p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <tech.icon size={60} color={tech.color} className="mb-4" />
-              <h3 className="text-lg font-semibold text-white">{tech.name}</h3>
+              <tech.icon size={40} sm:size={60} color={tech.color} className="mb-2 sm:mb-4" />
+              <h3 className="text-sm sm:text-lg font-semibold text-white text-center">{tech.name}</h3>
             </motion.div>
           ))}
         </motion.div>
