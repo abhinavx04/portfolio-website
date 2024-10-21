@@ -20,7 +20,7 @@ function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <img 
-                src="./src/assets/aboutme.jpeg" 
+                src="./public/assets/aboutme.jpeg" 
                 alt="Abhinav Pillai" 
                 className="w-full h-full object-cover"
               />

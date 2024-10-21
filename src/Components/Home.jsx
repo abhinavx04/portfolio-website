@@ -146,7 +146,7 @@ function Home() {
             }}
           >
             <img 
-              src="./src/assets/bck_img.jpeg" 
+              src="./public/assets/bck_img.jpeg" 
               alt="Abhinav Pillai" 
               className="w-full h-full object-cover"
             />
