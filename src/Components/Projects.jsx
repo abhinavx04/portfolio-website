@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Spotify Clone",
     description: "A clone of the popular music streaming platform Spotify.",
-    image: "./public/assets/spotify.png",
+    image: "/assets/spotify.png",
     technologies: "React.js, Tailwind CSS",
     github: "https://github.com/abhinavx04/spotify-clone",
     live: "https://spotify-clone-pearl-one.vercel.app/"
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my projects and skills.",
-    image: "./public/assets/portfolio.png",
+    image: "/assets/portfolio.png",
     technologies: "React.js, Tailwind CSS",
     github: "https://github.com/abhinavx04/portfolio-website",
     live: "https://your-portfolio-url.com"
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Amazon Clone",
     description: "A clone of the popular shopping platform Amazon.",
-    image: "./public/assets/amazon.png",
+    image: "/assets/amazon.png",
     technologies: "React.js, Tailwind CSS",
     github: "https://github.com/abhinavx04/amazonclone",
     live: "https://your-spotify-clone-url.com"
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "MakeMyTrip Clone",
     description: "A clone of the popular travel booking website MakeMyTrip.",
-    image: "./public/assets/mmt.png",
+    image: "/assets/mmt.png",
     technologies: "HTML, CSS",
     github: "https://github.com/abhinavx04/makemytripclone",
     live: "https://your-makemytrip-clone-url.com"
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Cuvette Tech Clone",
     description: "A clone of the Cuvette Tech website.",
-    image: "./public/assets/cuvette.png",
+    image: "/assets/cuvette.png",
     technologies: "HTML, CSS, MongoDB",
     github: "https://github.com/yourusername/cuvette-tech-clone",
     live: "https://your-cuvette-tech-clone-url.com"
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "RemoveBg Web App",
     description: "A web application to remove backgrounds from images.",
-    image: "./public/assets/removebg.png",
+    image: "/assets/removebg.png",
     technologies: "HTML, CSS, JavaScript, API Integration",
     github: "https://github.com/abhinavx04/removebg",
     live: "https://removebg-inky.vercel.app/"
